@@ -13,19 +13,28 @@ sap.ui.define([
 		},
 
 		onSearch: function (oEvent) {
-			var oModel = this.getView().getModel();
+
+			var oView = this.getView();
+			var oForm = oView.byId("formCEP");
+			var oModel = oView.getModel();
 			var sQuery = oEvent.getParameter("query");
 
 			if (!sQuery) {
+
 				oModel.setData({
 					emptyData: {}
 				});
+
+				oForm.setVisible(false);
+
+				return;
 			}
 
 			var sURL = "https://viacep.com.br/ws/" + sQuery + "/json/";
 
 			$.get(sURL, function (data, status) {
 				oModel.setData(data);
+				oForm.setVisible(true);
 			});
 
 		}

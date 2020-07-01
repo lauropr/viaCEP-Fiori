@@ -7,9 +7,9 @@
 					<content>
 						<SearchField maxLength="8" placeholder="Digite o CEP (apenas números)" search="onSearch"/>
 						<VBox class="sapUiSmallMargin">
-							<f:SimpleForm id="formCEP" editable="false" layout="ResponsiveGridLayout" title="Informações do CEP" labelSpanXL="3" labelSpanL="3"
-								labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
-								columnsL="1" columnsM="1" singleContainerFullSize="false">
+							<f:SimpleForm id="formCEP" visible="false" editable="false" layout="ResponsiveGridLayout" title="Informações do CEP" labelSpanXL="3"
+								labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+								columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
 								<f:content>
 									<Label text="CEP"/>
 									<Text text="{/cep}"/>
