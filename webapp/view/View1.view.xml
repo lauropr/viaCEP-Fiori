@@ -1,0 +1,36 @@
+<mvc:View controllerName="lauro.viaCEP.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" displayBlock="true"
+	xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<SearchField maxLength="8" placeholder="Digite o CEP (apenas números)" search="onSearch"/>
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="formCEP" editable="false" layout="ResponsiveGridLayout" title="Informações do CEP" labelSpanXL="3" labelSpanL="3"
+								labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+								columnsL="1" columnsM="1" singleContainerFullSize="false">
+								<f:content>
+									<Label text="CEP"/>
+									<Text text="{/cep}"/>
+									<Label text="Logradouro"/>
+									<Text text="{/logradouro}"/>
+									<Label text="Complemento"/>
+									<Text text="{/complemento}"/>
+									<Label text="Bairro"/>
+									<Text text="{/bairro}"/>
+									<Label text="Localidade"/>
+									<Text text="{/localidade}"/>
+									<Label text="Estado"/>
+									<Text text="{/uf}"/>
+									<Label text="IBGE"/>
+									<Text text="{/ibge}"/>
+								</f:content>
+							</f:SimpleForm>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
