@@ -29,7 +29,7 @@ sap.ui.define([
 			function isQueryValid(sQuery) {
 
 				var numbers = /^[0-9]+$/;
-				if (sQuery.match(numbers)) {
+				if (sQuery.match(numbers) || sQuery.length === 0) {
 					return true;
 				} else {
 					return false;
